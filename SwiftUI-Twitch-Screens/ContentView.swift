@@ -8,14 +8,43 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        UITabBar.appearance().unselectedItemTintColor = .white
+        UITabBar.appearance().backgroundColor = .black
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            NavigationView {
+                FollowView()
+            }
+            .tabItem {
+                Label("Takip Ediliyor", systemImage: "heart")
+            }
+            
+            NavigationView {
+                
+            }
+            .tabItem {
+                Label("Takip Ediliyor", systemImage: "safari")
+            }
+            
+            NavigationView {
+                
+            }
+            .tabItem {
+                Label("Takip Ediliyor", systemImage: "doc.on.doc")
+            }
+            
+            NavigationView {
+                
+            }
+            .tabItem {
+                Label("Takip Ediliyor", systemImage: "magnifyingglass")
+            }
         }
-        .padding()
+        .accentColor(Color("selectedTabBarColor"))
     }
 }
 

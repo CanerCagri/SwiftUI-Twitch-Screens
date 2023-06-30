@@ -11,6 +11,7 @@
 		0140BA9A2A4EF58D00E77EF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0140BA992A4EF58D00E77EF1 /* ContentView.swift */; };
 		0140BA9C2A4EF58E00E77EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0140BA9B2A4EF58E00E77EF1 /* Assets.xcassets */; };
 		0140BA9F2A4EF58E00E77EF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0140BA9E2A4EF58E00E77EF1 /* Preview Assets.xcassets */; };
+		014622E92A4F48BE00A39F37 /* FollowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014622E82A4F48BE00A39F37 /* FollowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0140BA992A4EF58D00E77EF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0140BA9B2A4EF58E00E77EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0140BA9E2A4EF58E00E77EF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		014622E82A4F48BE00A39F37 /* FollowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				0140BA972A4EF58D00E77EF1 /* SwiftUI_Twitch_ScreensApp.swift */,
 				0140BA992A4EF58D00E77EF1 /* ContentView.swift */,
+				014622E82A4F48BE00A39F37 /* FollowView.swift */,
 				0140BA9B2A4EF58E00E77EF1 /* Assets.xcassets */,
 				0140BA9D2A4EF58E00E77EF1 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0140BA9A2A4EF58D00E77EF1 /* ContentView.swift in Sources */,
+				014622E92A4F48BE00A39F37 /* FollowView.swift in Sources */,
 				0140BA982A4EF58D00E77EF1 /* SwiftUI_Twitch_ScreensApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
