@@ -13,24 +13,39 @@ struct FollowView: View {
             Color("backgroundColor")
                 .ignoresSafeArea()
             
-            VStack(alignment: .leading) {
-                
-                Text("Takip Edilenler")
-                    .foregroundColor(.white)
-                    .font(.system(size: 35))
-                
-                ScrollView(.horizontal) {
-                    HStack {
-                        ForEach(0...10, id: \.self) { _ in
-                            ItemView()
-                                .padding(.top, 10)
+            ScrollView {
+                VStack(alignment: .leading) {
+                    
+                    Text("Takip Edilenler")
+                        .foregroundColor(.white)
+                        .font(.system(size: 35))
+                    
+                    ScrollView(.horizontal) {
+                        HStack {
+                            ForEach(0...10, id: \.self) { _ in
+                                HorizontalItemView()
+                                    .padding(.top, 10)
+                            }
                         }
                     }
+                    
+                    Text("Takip Edilenler")
+                        .foregroundColor(.white)
+                        .font(.system(size: 35))
+                    
+                    ScrollView(.vertical) {
+                        VStack {
+                            ForEach(0...10, id: \.self) { _ in
+                                VerticalItemView()
+                            }
+                        }
+                    }
+                    
+                    Spacer()
                 }
-                
-                Spacer()
+                .padding(.top, 30)
             }
-            .padding(.top, 30)
+
             
         }
         .toolbar {
@@ -102,7 +117,7 @@ struct FollowView_Previews: PreviewProvider {
     }
 }
 
-struct ItemView: View {
+struct HorizontalItemView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Image("placeholder")
@@ -120,5 +135,68 @@ struct ItemView: View {
             }
         }
         .frame(maxWidth: 200)
+    }
+}
+
+struct VerticalItemView: View {
+    var body: some View {
+        HStack(alignment: .bottom, spacing: 30) {
+            ZStack {
+                Image("placeholder2")
+                    .resizable()
+                    .frame(width: 170, height: 100, alignment: .center)
+                
+                VStack {
+                    
+                    Spacer()
+                    
+                    HStack {
+                       
+                        Circle()
+                            .frame(width: 16, height: 16, alignment: .leading)
+                            .foregroundColor(.red)
+                        
+                        Text("18,3 Bin")
+                            .foregroundColor(.white)
+                    }
+                    .padding(.trailing, 55)
+                }
+          
+                
+                
+            }
+            
+            VStack(alignment: .leading) {
+                HStack(alignment: .center) {
+                    Image("placeholder")
+                        .resizable()
+                        .frame(width: 25, height: 25, alignment: .center)
+                        .clipShape(Circle())
+                    
+                    Text("shroud")
+                        .foregroundColor(.white)
+                        .font(.system(size: 25))
+                        .bold()
+                }
+                
+                Text("CS:2 LETS GO !announcements")
+                    .foregroundColor(.gray)
+                
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(0...3, id: \.self) { _ in
+                            ZStack {
+                                Capsule()
+                                    .foregroundColor(.gray)
+                                Text("English")
+                                    .foregroundColor(.white)
+                            }
+                            .frame(width: 90, height: 30, alignment: .center)
+                        }
+                    }
+                }
+                
+            }
+        }
     }
 }
